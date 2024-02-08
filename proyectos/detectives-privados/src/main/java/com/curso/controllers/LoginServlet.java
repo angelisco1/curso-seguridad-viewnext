@@ -59,7 +59,12 @@ public class LoginServlet extends HttpServlet {
 				}
 				
 				
-				HttpSession session = req.getSession();
+				HttpSession session = req.getSession(false);
+				if (session != null) {
+					session.invalidate();
+				}
+				
+				session = req.getSession(true);
 				
 				
 				

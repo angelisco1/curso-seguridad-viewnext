@@ -10,14 +10,18 @@
 </head>
 <body>
   
-  <h1>Bienvenido ${user.name} (rol: ${user.role})</h1>
+  <h1>Informe: ${informe.titulo}</h1>
+  <p>${informe.descripcion}</p>
   
   <!--
   <a href="login.html">Logout</a>
   -->
+  <a href="informes">Informes</a>
   <a href="nuevo-informe">Nuevo informe</a>
-  <a href="informes">Ver informes</a>
   <a href="logout">Logout</a>
   
+  <hr>
+  
+  <pre style="color: ${informe.color};">${informe.contenido}</pre>
 </body>
 </html>

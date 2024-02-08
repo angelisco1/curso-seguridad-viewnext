@@ -30,6 +30,11 @@ public class SignupServlet extends HttpServlet {
 		String web = req.getParameter("web");
 		String role = req.getParameter("role");
 		
+		if (name == "" || username == "" || password == "" || web == "" || role == "") {
+			resp.sendRedirect("signup.html");
+			return;
+		}
+		
 		
 		String gRecaptchaResponse = req.getParameter("g-recaptcha-response");
 		String url = "https://www.google.com/recaptcha/api/siteverify";
